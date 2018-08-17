@@ -1,0 +1,15 @@
+<mydata>
+     <folders>
+         <folder name="Root Folder">
+             <folder name="First" />
+             <folder name="Second Folder">
+                 <folder name="My Second Sub"/>
+             </folder>
+         </folder>
+     </folders>
+     <tags>
+         <tag name="mytag1"/>
+         <tag name="mytag2"/>
+         <tag name="mytagN"/>
+     </tags>
+</mydata>

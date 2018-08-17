@@ -56,7 +56,7 @@ public class ItemMatcher {
                 }
             }
             fLine += itemName + ":" + tags;
-            formatedLines.add(fLine);
+            formatedLines.add(fLine); System.out.println(fLine);
         });
         return formatedLines;
     }

@@ -13,7 +13,7 @@ public class App
     {
 
         System.out.println( "Hello World!" );
-        DiskParser dP = new DiskParser("src/disk.xml");
+        DiskParser dP = new DiskParser("src/fixtures/disk.xml");
         Map folders = dP.parserFolders();
         //System.out.println(folders);
         Map tags = dP.parseTags();
@@ -22,7 +22,7 @@ public class App
         folders.keySet().forEach(key -> System.out.println(folders.get(key)));
         tags.keySet().forEach(key -> System.out.println(tags.get(key)));
 
-        ItemMatcher iF = new ItemMatcher("src/items.txt");
+        ItemMatcher iF = new ItemMatcher("src/fixtures/items.txt");
         List<Item> items = iF.match(folders, tags);
         items.forEach(item -> {
             String iStr = item.getFolder().getName().toUpperCase();
