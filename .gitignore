@@ -6,3 +6,7 @@
 # Maven
 log/
 target/
+
+#derby
+src/derby/db
+derby.log
