@@ -56,7 +56,9 @@ public class App
         System.out.println("--- Database ---");
         String dbPath = "src/derby/db";
         Database db = new Database(dbPath);
-        db.dropAllTables();
+        if (db.dropAllTables()) {
+            System.out.println("Tables are removed.");
+        }
         if (db.createTables()) {
             System.out.println("Tables are created.");
         }

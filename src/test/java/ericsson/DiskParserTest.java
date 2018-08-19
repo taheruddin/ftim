@@ -24,10 +24,8 @@ public class DiskParserTest {
         // Number of folders is right
         assertEquals(4, keys.size());
         // Keys of the folders are as expected
-        assertTrue(keys.contains("ROOT FOLDER"));
-        assertTrue(keys.contains("FIRST"));
-        assertTrue(keys.contains("SECOND FOLDER"));
-        assertTrue(keys.contains("MY SECOND SUB"));
+        String[] kS = {"ROOT FOLDER", "FIRST", "SECOND FOLDER", "MY SECOND SUB"};
+        assertTrue(keys.containsAll(Arrays.asList(kS)));
         // IDs are unique
         List ids = new ArrayList();
         keys.forEach(key -> {
@@ -44,9 +42,8 @@ public class DiskParserTest {
         // Number of tags is right
         assertEquals(3, keys.size());
         // Keys of the tags are as expected
-        assertTrue(keys.contains("MYTAG1"));
-        assertTrue(keys.contains("MYTAG2"));
-        assertTrue(keys.contains("MYTAGN"));
+        String[] kS = {"MYTAG1", "MYTAG2", "MYTAGN"};
+        assertTrue(keys.containsAll(Arrays.asList(kS)));
         // IDs are unique
         List ids = new ArrayList();
         keys.forEach(key -> {

@@ -32,7 +32,6 @@ public class Database {
                 folders.get(i).getName() + "'," +
                 folders.get(i).getParentId() + ")";
         }
-        //System.out.println(sql);
         try {
             PreparedStatement insert = conn.prepareStatement(sql);
             insert.execute();
@@ -55,7 +54,7 @@ public class Database {
                     tags.get(i).getId() + ", '" +
                     tags.get(i).getName() + "')";
         }
-        //System.out.println(sql);
+
         try {
             PreparedStatement insert = conn.prepareStatement(sql);
             insert.execute();
@@ -79,7 +78,7 @@ public class Database {
                     items.get(i).getName() + "'," +
                     items.get(i).getFolder().getId() + ")";
         }
-        //System.out.println(sql);
+
         try {
             PreparedStatement insert = conn.prepareStatement(sql);
             insert.execute();
@@ -106,7 +105,7 @@ public class Database {
                         + items.get(i).getTags().get(j).getId() + ")";
             }
         }
-        //System.out.println(sql);
+
         try {
             PreparedStatement insert = conn.prepareStatement(sql);
             insert.execute();
@@ -187,7 +186,7 @@ public class Database {
     public boolean dropAllTables() {
         boolean rs = false;
         // Unfortunately, Derby does not support removing multiple table in one statement
-        // neither IF EXISTS
+        // neither IF NOT EXISTS
         try {
             PreparedStatement foldersTable = conn.prepareStatement(
                     "DROP TABLE folders"
